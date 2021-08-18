@@ -1,0 +1,2829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./vscode/style.css">
+</head>
+<body>
+    <div class="page ha-focus">
+        <nav class="page__navigation navigation scroller">
+            <ul class="ra-list navigation__list scroller__list" role="tablist">
+                <li class="navigation__group">
+                    <button class="ra-button ui-button navigation__button" type="button" role="tab" aria-selected="true" aria-controls="block-tab" id="block">display: block</button>
+                </li>
+                <li class="navigation__group">
+                    <button class="ra-button ui-button navigation__button" type="button" role="tab" aria-selected="false"  aria-controls="inline-tab" id="inline" tabindex="-1">display: inline</button>
+                </li>
+                <li class="navigation__group">
+                    <button class="ra-button ui-button navigation__button" type="button" role="tab" aria-selected="false"  aria-controls="inline-block-tab" id="inline-block" tabindex="-1">display: inline-block</button>
+                </li>
+                <li class="navigation__group">
+                    <button class="ra-button ui-button navigation__button" type="button" role="tab" aria-selected="false"  aria-controls="flex-tab" id="flex" tabindex="-1">display: flex</button>
+                </li>
+                <li class="navigation__group">
+                    <button class="ra-button ui-button navigation__button" type="button" role="tab" aria-selected="false"  aria-controls="inline-flex-tab" id="inline-flex" tabindex="-1">display: inline-flex</button>
+                </li>
+                <li class="navigation__group">
+                    <button class="ra-button ui-button navigation__button" type="button" role="tab" aria-selected="false"  aria-controls="grid-tab" id="grid" tabindex="-1">display: grid</button>
+                </li>
+                <li class="navigation__group">
+                    <button class="ra-button ui-button navigation__button" type="button" role="tab" aria-selected="false"  aria-controls="inline-grid-tab" id="inline-grid" tabindex="-1">display: inline-grid</button>
+                </li>
+            </ul>
+        </nav>
+        <div class="page__infographics infographics">
+            <div class="infographics__text">
+                <p>Before reading the cheat sheet you should look at the following graphic that I use to mark elements areas</p>
+            </div>
+            <div class="infographics__parent">
+                <span class="infographics__parent-text">I'm a parent area</span>
+                <span class="infographics__item">I'm a child area</span>
+            </div>
+        </div>
+        <div class="page__container">
+            <section id="block-tab" aria-labelledby="block" role="tabpanel" tabindex="0" class="page__content">
+                <h2>Default behavior</h2>
+                <p>
+                    <span class="page__point">1</span>
+                    The width of block-level elements fills up all available space by the text direction.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    The height of block-level elements is calculated automatically depending on the content height. 
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>			
+                <p>
+                    <span class="page__point">2</span>
+                    Block-level elements always start on a new line.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element #1</span>
+                                </div>
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element #2</span>
+                                </div>							
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Box model features</h2>
+                <p>
+                    <span class="page__point">3</span>
+                    The width and height properties can be applied to block-level elements.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box demo-box_setted-sizes">
+                                    <span class="demo-box__text">div element <br> 148x148px</span>
+                                </div>
+                                <div class="demo-box demo-box_setted-sizes">
+                                    <span class="demo-box__text">div element <br> 148x148px</span>
+                                </div>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">block-level elements with setted sizes</span>
+                    </div>	
+                </div>			
+                <p>
+                    <span class="page__point">4</span>
+                    The padding and border properties can be applied too.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a block-level element</span>
+                            </div>
+                            <div class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a block-level element</span>
+                            </div>							
+                        </div>
+                        <span class="demo__caption">padding from block-level elements</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box is-border">
+                                <span class="demo-box__text">I'm a block-level element</span>
+                            </div>
+                            <div class="demo-box is-border">
+                                <span class="demo-box__text">I'm a block-level element</span>
+                            </div>							
+                        </div>
+                        <span class="demo__caption">borders from block-level elements</span>
+                    </div>	
+                </div>
+                <p>
+                    When we set margins we get some surprises. The margin before the first block-level element and the margin after the last block-level element end up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first block-level element</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>																		
+                            </div>
+                        </div>	
+                        <span class="demo__caption">margins from the last block-level element</span>
+                    </div>
+                </div>			
+                <p>
+                    If we set the border and padding properties for the parent element margins cease collapsing.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="parent-border">
+                                    <div class="demo-box is-margin">
+                                        <span class="demo-box__text">I'm a block-level element</span>
+                                    </div>
+                                    <div class="demo-box">
+                                        <span class="demo-box__text">I'm a block-level element</span>
+                                    </div>	
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the parent element with borders and margins from the first block-level element</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="parent-border">
+                                    <div class="demo-box">
+                                        <span class="demo-box__text">I'm a block-level element</span>
+                                    </div>
+                                    <div class="demo-box is-margin">
+                                        <span class="demo-box__text">I'm a block-level element</span>
+                                    </div>		
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the parent element with borders and margins from the last block-level element</span>
+                    </div>	
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>												
+                            </div>
+                            <span class="demo__caption">the parent element with paddings and margins from the first block-level element</span>
+                        </div>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>		
+                            </div>
+                            <span class="demo__caption">the parent element with paddings and margins from the last block-level element</span>
+                        </div>
+                    </div>	
+                </div>
+                <p>
+                    The margins from adjacent block-level elements collapse too. The browsers choose the biggest between the two. And you can't change it.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>							
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the parent element without paddings and margins from block-levels elements</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>							
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a block-level element</span>
+                                </div>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the parent element with paddings and margins from block-levels elements</span>
+                    </div>
+                </div>	
+            </section>
+            <section id="inline-tab" aria-labelledby="inline" role="tabpanel" tabindex="0" class="page__content" hidden>
+                <h2>Default behavior</h2>
+                <p>
+                    <span class="page__point">1</span>
+                    The width and height of inline elements are calculated automatically depending on the content.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm an inline</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm an inline with some text</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    If the content of the inline element doesn't fit on one line then a browser will move it on a new line. The width will be calculated depending on the maximum line length.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm an inline element with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+                <p>
+                    <span class="page__point">2</span>
+                    Inline elements will be on the same line if there is space. If there isn't space, a browser will move an element on a new line.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm an inline #1</span>
+                                </span>
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm an inline #2</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm an inline #1</span>
+                                </span>
+                                <span class="demo-box">								
+                                    <span class="demo-box__text">I'm an inline #2</span>
+                                </span>
+                                <span class="demo-box">								
+                                    <span class="demo-box__text">I'm an inline #3</span>
+                                </span>
+                                <span class="demo-box">								
+                                    <span class="demo-box__text">I'm an inline #4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Box model features</h2>
+                <p>
+                    <span class="page__point">3</span>
+                    The width and height properties aren't applied to inline elements.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm an inline #1 with 148x148px</span>
+                                </span>
+                                <span class="demo-box demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm an inline #2 with 148x148px</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">inline elements with setted sizes</span>
+                    </div>	
+                </div>	
+                <p>
+                    <span class="page__point">4</span>
+                    You can set paddings, borders and margins, but vertical paddings, borders and margins will end up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box is-padding">
+                                    <span class="demo-box__text">I'm an inline #1</span>
+                                </span>
+                                <span class="demo-box is-padding">
+                                    <span class="demo-box__text">I'm an inline #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">paddings from inline elements</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box is-border">
+                                    <span class="demo-box__text">I'm an inline #1</span>
+                                </span>
+                                <span class="demo-box is-border">
+                                    <span class="demo-box__text">I'm an inline #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">borders from inline elements</span>
+                    </div>
+                </div>
+                <div class="page__demos">			
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm an inline #1</span>
+                                </span>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm an inline #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from inline elements</span>
+                    </div>
+                </div>
+            </section>
+            <section id="inline-block-tab" aria-labelledby="inline-block" role="tabpanel" tabindex="0" class="page__content" hidden>
+                <h2>Default behavior</h2>
+                <p>
+                    <span class="page__point">1</span>
+                    The width and height of inline-block elements are calculated automatically depending on the content.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block with some text</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    If the content of the inline-block element doesn't fit on one line then a browser will move it on a new line. The width will be equal of the parent width.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block element with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+                <p>
+                    <span class="page__point">2</span>
+                    Inline-block elements will be on the same line if there is space. Also the whitespace in the HTML code will create some gap between elements.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block #1</span>
+                                </span>
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block #2</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    If there isn't space, a browser will move an element on a new line.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block #1</span>
+                                </span>
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block #2</span>
+                                </span>
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block #3</span>
+                                </span>
+                                <span class="demo-box inline-block">    
+                                    <span class="demo-box__text">I'm an inline-block #4</span>
+                                </span>
+                                <span class="demo-box inline-block">    
+                                    <span class="demo-box__text">I'm an inline-block #5</span>
+                                </span>
+                                <span class="demo-box inline-block">    
+                                    <span class="demo-box__text">I'm an inline-block #6</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Box model features</h2>
+                <p>
+                    <span class="page__point">3</span>
+                    The width and height properties are applied to inline-block elements.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm an inline-block #1 with 148x148px</span>
+                                </span>
+                                <span class="demo-box inline-block demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm an inline-block #2 with 148x148px</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">inline-block elements with setted sizes</span>
+                    </div>	
+                </div>	
+                <p>
+                    <span class="page__point">4</span>
+                    You can set paddings, borders and margins without ending up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block is-padding">
+                                    <span class="demo-box__text">I'm an inline-block #1</span>
+                                </span>
+                                <span class="demo-box inline-block is-padding">
+                                    <span class="demo-box__text">I'm an inline-block #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">inline-block elements with paddings</span>
+                    </div>
+                </div>
+                <div class="page__demos">	
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block is-border">
+                                    <span class="demo-box__text">I'm an inline-block #1</span>
+                                </span>
+                                <span class="demo-box inline-block is-border">
+                                    <span class="demo-box__text">I'm an inline-block #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">inline-block elements with borders</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-block is-margin">
+                                    <span class="demo-box__text">I'm an inline-block #1</span>
+                                </span>
+                                <span class="demo-box inline-block is-margin">
+                                    <span class="demo-box__text">I'm an inline-block #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">inline-block elements with margins</span>
+                    </div>
+                </div>
+            </section>
+            <section id="flex-tab" aria-labelledby="flex" role="tabpanel" tabindex="0" class="page__content" hidden>
+                <h2>Default behavior</h2>
+                <p>
+                    <span class="page__point">1</span>
+                    The width of the flex container fills up all available space by the text direction.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div element as a flex container</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the span element as a flex container</span>
+                    </div>
+                </div>
+                <p>
+                    The height of a flex container is calculated automatically depending on the content height. 
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div element as a flex container</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the span element as a flex container</span>
+                    </div>
+                </div>			
+                <p>
+                    <span class="page__point">2</span>
+                    Flex containers always starts on a new line.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #1</span>
+                                </div>
+                                <span class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div and span elements as a flex container</span>
+                    </div>		
+                </div>
+                <h2>Box model features</h2>
+                <p>
+                    <span class="page__point">3</span>
+                    The width and height properties can be applied to a flex container.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box flex demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm a flex container #1 <br> 148x148px</span>
+                                </div>
+                                <span class="demo-box flex demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm a flex container #2 <br> 148x148px</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div and span elements as a flex container with setted sizes</span>
+                    </div>		
+                </div>			
+                <p>
+                    <span class="page__point">4</span>
+                    The padding and border properties can be applied too.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box flex is-padding">
+                                <span class="demo-box__text">I'm a flex container #1</span>
+                            </div>
+                            <span class="demo-box flex is-padding">
+                                <span class="demo-box__text">I'm a flex container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as a flex container with paddings</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box flex is-border">
+                                <span class="demo-box__text">I'm a flex container #1</span>
+                            </div>
+                            <span class="demo-box flex is-border">
+                                <span class="demo-box__text">I'm a flex container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as a flex container with borders</span>
+                    </div>	
+                </div>
+                <p>
+                    When we set margins we get some surprises. The margin before the first child element and the margin after the last child element end up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box flex is-margin">
+                                    <span class="demo-box__text">I'm a flex container #1</span>
+                                </div>
+                                <span class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #2</span>
+                                </span>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first flex container</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #1</span>
+                                </div>
+                                <span class="demo-box flex is-margin">
+                                    <span class="demo-box__text">I'm a flex container #2</span>
+                                </span>																		
+                            </div>
+                            <span class="demo__caption">margins from the last flex container</span>
+                        </div>
+                    </div>
+                </div>			
+                <p>
+                    If we set the border and padding properties for the parent element margins cease collapsing.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="parent-border">
+                                    <div class="demo-box flex is-margin">
+                                        <span class="demo-box__text">I'm a flex container #1</span>
+                                    </div>
+                                    <span class="demo-box flex">
+                                        <span class="demo-box__text">I'm a flex container #2</span>
+                                    </span>												
+                                </div>
+                            </div>
+                            <span class="demo__caption">the parent element with borders and margins from the first flex container</span>
+                        </div>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="parent-border">
+                                    <div class="demo-box flex">
+                                        <span class="demo-box__text">I'm a flex container #1</span>
+                                    </div>
+                                    <span class="demo-box flex is-margin">
+                                        <span class="demo-box__text">I'm a flex container #2</span>
+                                    </span>		
+                                </div>
+                            </div>
+                            <span class="demo__caption">the parent element with border and margins from the last flex container</span>
+                        </div>
+                    </div>	
+                </div>	
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box flex is-margin">
+                                    <span class="demo-box__text">I'm a flex container #1</span>
+                                </div>
+                                <span class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #2</span>
+                                </span>												
+                            </div>
+                            <span class="demo__caption">the parent element with paddings and margins from the first flex container</span>
+                        </div>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #1</span>
+                                </div>
+                                <span class="demo-box flex is-margin">
+                                    <span class="demo-box__text">I'm a flex container #2</span>
+                                </span>		
+                            </div>
+                            <span class="demo__caption">the parent element with paddings and margins from the last flex container</span>
+                        </div>
+                    </div>	
+                </div>	
+                <p>
+                    The margins from adjacent flex containers collapse. The browsers choose the biggest between the two. And you can't change it.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #1</span>
+                                </div>
+                                <span class="demo-box flex is-margin">
+                                    <span class="demo-box__text">I'm a flex container #2</span>
+                                </span>
+                                <div class="demo-box flex is-margin">
+                                    <span class="demo-box__text">I'm a flex container #3</span>
+                                </div>							
+                                <span class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the parent element without paddings and margins from flex containers</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #1</span>
+                                </div>
+                                <span class="demo-box flex is-margin">
+                                    <span class="demo-box__text">I'm a flex container #2</span>
+                                </span>
+                                <div class="demo-box flex is-margin">
+                                    <span class="demo-box__text">I'm a flex container #3</span>
+                                </div>							
+                                <span class="demo-box flex">
+                                    <span class="demo-box__text">I'm a flex container #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the parent element with paddings and margins from flex containers</span>
+                    </div>
+                </div>	
+                <h2>Default behavior of flex items</h2>
+                <p>
+                    <span class="page__point">5</span>
+                    Flex items always are blockified. All flex items that are set the display property with the inline, inline-block, inline-flex, inline-grid, or inline-table values will be changed. The inline and inline-block will changed to block, inline-flex -> flex, inline-grid -> grid and inline-table -> table.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline as a flex item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm a flex item element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-block as a flex item</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <span class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm a flex item element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-flex as a flex item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <span class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm a flex item element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-grid as a flex item</span>
+                    </div>				
+                </div>
+                <p>
+                    <span class="page__point">6</span>
+                    The width of flex items depending on the flex-direction property. If flex-direction: row (default value) the width is calculated automatically depending on the content and
+                    the height of flex items is equal to the flex container height.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: row</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item with some text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: row</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text text text text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: row</span>
+                    </div>
+                </div>
+                <p>
+                    When flex-direction: column the width of flex items fills up all available space by the text direction and the height is calculated automatically depending on the content.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex flex-direction" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: column</span>
+                    </div>				
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex flex-direction" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item with some text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: column</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex flex-direction" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text text text text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: column</span>
+                    </div>
+                </div>
+                <p>
+                    <span class="page__point">7</span>
+                    Flex items position depending on the flex-direction property. When flex-direction: row (default value) flex items will be on the same line. If there isn't space, a browser will squeeze an element depending on its content.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when flex-direction: row</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #2</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #3</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #4</div>
+                                </div>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when flex-direction: row</span>
+                    </div>
+                </div>
+                <p>
+                    When flex-direction: column flex items will be alignment in a column.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex flex-direction">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when flex-direction: column</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex flex-direction">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #2</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #3</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #4</div>
+                                </div>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when flex-direction: column</span>
+                    </div>
+                </div>
+                <h2>Box model features of flex items</h2>
+                <p>
+                    <span class="page__point">8</span>
+                    The width and height properties can be applied to flex items.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport flex">
+                            <div class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a flex item #1 <br> 148x148px</span>
+                            </div>
+                            <span class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a flex item #2 <br> 148x148px</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with setted sizes when flex-direction: row</span>
+                    </div>	
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport flex flex-direction">
+                            <div class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a flex item #1 <br> 148x148px</span>
+                            </div>
+                            <span class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a flex item #2 <br> 148x148px</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with setted sizes when flex-direction: column</span>
+                    </div>	
+                </div>			
+                <p>
+                    <span class="page__point">9</span>
+                    The padding and border properties can be applied too.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport flex">
+                            <div class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a flex item #1</span>
+                            </div>
+                            <span class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a flex item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with paddings when flex-direction: row</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport flex">
+                            <div class="demo-box is-border">
+                                <span class="demo-box__text">I'm a flex item #1</span>
+                            </div>
+                            <span class="demo-box is-border">
+                                <span class="demo-box__text">I'm a flex item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with borders when flex-direction: row</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport flex  flex-direction">
+                            <div class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a flex item #1</span>
+                            </div>
+                            <span class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a flex item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with paddings when flex-direction: column</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport flex flex-direction">
+                            <div class="demo-box is-border">
+                                <span class="demo-box__text">I'm a flex item #1</span>
+                            </div>
+                            <span class="demo-box is-border">
+                                <span class="demo-box__text">I'm a flex item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with borders when flex-direction: column</span>
+                    </div>				
+                </div>
+                <p>
+                    Pay attention margins don't end up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first flex item when flex-direction: row</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <div class="demo-box ">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>																		
+                            </div>
+                            <span class="demo__caption">margins from the last flex item when flex-direction: row</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex flex-direction">
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first flex item when flex-direction: column</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex flex-direction">
+                                <div class="demo-box ">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>																		
+                            </div>
+                            <span class="demo__caption">margins from the last flex item when flex-direction: column</span>
+                        </div>
+                    </div>
+                </div>			
+                <p>
+                    The margins from adjacent flex items don't collapse too.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #3</span>
+                                </div>							
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from adjacent flex items when flex-direction: row</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport flex flex-direction">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #3</span>
+                                </div>							
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from adjacent flex items when flex-direction: column</span>
+                    </div>
+                </div>
+            </section>
+            <section id="inline-flex-tab" aria-labelledby="inline-flex" role="tabpanel" tabindex="0" class="page__content" hidden>
+                <h2>Default behavior</h2>
+                <p>
+                    <span class="page__point">1</span>
+                    The width and height of inline flex container is calculated automatically depending on the content.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm an inline flex container</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div element as an inline flex container</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm an inline flex container</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the span element as an inline flex container</span>
+                    </div>
+                </div>
+                <p>
+                    If the content of the inline flex container doesn't fit on one line then a browser will move it on a new line. The width will be equal of the parent width. 
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm an inline flex container with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div element as an inline flex container</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm an inline flex container with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the span element as an inline flex container</span>
+                    </div>
+                </div>			
+                <p>
+                    <span class="page__point">2</span>
+                    Inline flex containers will be on the same line if there is space. Also the whitespace in the HTML code will create some gap between elements.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm an inline flex container #1</span>
+                                </div>
+                                <span class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm an inline flex container #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline flex container</span>
+                    </div>		
+                </div>
+                <h2>Box model features</h2>
+                <p>
+                    <span class="page__point">3</span>
+                    The width and height properties can be applied to an inline flex container.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box inline-flex demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm an inline flex container #1 <br> 148x148px</span>
+                                </div>
+                                <span class="demo-box inline-flex demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm an inline flex container #2 <br> 148x148px</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline flex container with setted sizes</span>
+                    </div>		
+                </div>			
+                <p>
+                    <span class="page__point">4</span>
+                    You can set paddings, borders and margins without ending up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box inline-flex is-padding">
+                                <span class="demo-box__text">I'm an inline flex container #1</span>
+                            </div>
+                            <span class="demo-box inline-flex is-padding">
+                                <span class="demo-box__text">I'm an inline flex container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline flex container with paddings</span>
+                    </div>	
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box inline-flex is-border">
+                                <span class="demo-box__text">I'm an inline flex container #1</span>
+                            </div>
+                            <span class="demo-box inline-flex is-border">
+                                <span class="demo-box__text">I'm an inline flex container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline flex container with borders</span>
+                    </div>	
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box inline-flex is-margin">
+                                <span class="demo-box__text">I'm an inline flex container #1</span>
+                            </div>
+                            <span class="demo-box inline-flex is-margin">
+                                <span class="demo-box__text">I'm an inline flex container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline flex container with margins</span>
+                    </div>	
+                </div>			
+                <h2>Default behavior of flex items</h2>
+                <p>
+                    <span class="page__point">5</span>
+                    Flex items always are blockified. All flex items that are set the display property with the inline, inline-block, inline-flex, inline-grid, or inline-table values will be changed. The inline and inline-block will changed to block, inline-flex -> flex, inline-grid -> grid and inline-table -> table.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline as a flex item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm a flex item element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-block as a flex item</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <span class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm a flex item element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-flex as a flex item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <span class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm a flex item element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-grid as a flex item</span>
+                    </div>				
+                </div>
+                <p>
+                    <span class="page__point">6</span>
+                    The width of flex items depending on the flex-direction property. If flex-direction: row (default value) the width is calculated automatically depending on the content and
+                    the height of flex items is equal to the flex container height.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: row</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item with some text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: row</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text text text text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: row</span>
+                    </div>
+                </div>
+                <p>
+                    When flex-direction: column the width of flex items fills up all available space by the text direction and the height is calculated automatically depending on the content.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex flex-direction" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: column</span>
+                    </div>				
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex flex-direction" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item with some text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: column</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex flex-direction" style="height: 150px;">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text text text text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when the parent has height: 150px and flex-direction: column</span>
+                    </div>
+                </div>
+                <p>
+                    <span class="page__point">7</span>
+                    Flex items position depending on the flex-direction property. When flex-direction: row (default value) flex items will be on the same line. If there isn't space, a browser will squeeze an element depending on its content.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when flex-direction: row</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #2</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #3</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #4</div>
+                                </div>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when flex-direction: row</span>
+                    </div>
+                </div>
+                <p>
+                    When flex-direction: column flex items will be alignment in a column.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex flex-direction">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when flex-direction: column</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex flex-direction">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #2</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #3</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a flex item #4</div>
+                                </div>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">flex items when flex-direction: column</span>
+                    </div>
+                </div>
+                <h2>Box model features of flex items</h2>
+                <p>
+                    <span class="page__point">8</span>
+                    The width and height properties can be applied to flex items.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport inline-flex">
+                            <div class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a flex item #1 <br> 148x148px</span>
+                            </div>
+                            <span class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a flex item #2 <br> 148x148px</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with setted sizes when flex-direction: row</span>
+                    </div>	
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport inline-flex flex-direction">
+                            <div class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a flex item #1 <br> 148x148px</span>
+                            </div>
+                            <span class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a flex item #2 <br> 148x148px</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with setted sizes when flex-direction: column</span>
+                    </div>	
+                </div>			
+                <p>
+                    <span class="page__point">9</span>
+                    The padding and border properties can be applied too.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport inline-flex">
+                            <div class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a flex item #1</span>
+                            </div>
+                            <span class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a flex item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with paddings when flex-direction: row</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport inline-flex">
+                            <div class="demo-box is-border">
+                                <span class="demo-box__text">I'm a flex item #1</span>
+                            </div>
+                            <span class="demo-box is-border">
+                                <span class="demo-box__text">I'm a flex item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with borders when flex-direction: row</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport inline-flex  flex-direction">
+                            <div class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a flex item #1</span>
+                            </div>
+                            <span class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a flex item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with paddings when flex-direction: column</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport inline-flex flex-direction">
+                            <div class="demo-box is-border">
+                                <span class="demo-box__text">I'm a flex item #1</span>
+                            </div>
+                            <span class="demo-box is-border">
+                                <span class="demo-box__text">I'm a flex item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">flex items with borders when flex-direction: column</span>
+                    </div>				
+                </div>
+                <p>
+                    Pay attention margins don't end up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first flex item when flex-direction: row</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <div class="demo-box ">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>																		
+                            </div>
+                            <span class="demo__caption">margins from the last flex item when flex-direction: row</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex flex-direction">
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first flex item when flex-direction: column</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex flex-direction">
+                                <div class="demo-box ">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>																		
+                            </div>
+                            <span class="demo__caption">margins from the last flex item when flex-direction: column</span>
+                        </div>
+                    </div>
+                </div>			
+                <p>
+                    The margins from adjacent flex items don't collapse too.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #3</span>
+                                </div>							
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from adjacent flex items when flex-direction: row</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-flex flex-direction">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #2</span>
+                                </span>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a flex item #3</span>
+                                </div>							
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a flex item #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from adjacent flex items when flex-direction: column</span>
+                    </div>
+                </div>
+            </section>
+            <section id="grid-tab" aria-labelledby="grid" role="tabpanel" tabindex="0" class="page__content" hidden>
+                <h2>Default behavior</h2>
+                <p>
+                    <span class="page__point">1</span>
+                    The width of the grid container fills up all available space by the text direction.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div element as a grid container</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the span element as a grid container</span>
+                    </div>
+                </div>
+                <p>
+                    The height of a grid container is calculated automatically depending on the content height. 
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div element as a grid container</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the span element as a grid container</span>
+                    </div>
+                </div>			
+                <p>
+                    <span class="page__point">2</span>
+                    A grid container always starts on a new line.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #1</span>
+                                </div>
+                                <span class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div and span elements as a grid container</span>
+                    </div>		
+                </div>
+                <h2>Box model features</h2>
+                <p>
+                    <span class="page__point">3</span>
+                    The width and height properties can be applied to a grid container.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box grid demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm a grid container #1 <br> 148x148px</span>
+                                </div>
+                                <span class="demo-box grid demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm a grid container #2 <br> 148x148px</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div and span elements as a grid container with setted sizes</span>
+                    </div>		
+                </div>			
+                <p>
+                    <span class="page__point">4</span>
+                    The padding and border properties can be applied too.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box grid is-padding">
+                                <span class="demo-box__text">I'm a grid container #1</span>
+                            </div>
+                            <span class="demo-box grid is-padding">
+                                <span class="demo-box__text">I'm a grid container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as a grid container with paddings</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box grid is-border">
+                                <span class="demo-box__text">I'm a grid container #1</span>
+                            </div>
+                            <span class="demo-box grid is-border">
+                                <span class="demo-box__text">I'm a grid container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as a grid container with borders</span>
+                    </div>	
+                </div>
+                <p>
+                    When we set margins we get some surprises. The margin before the first child element and the margin after the last child element end up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box grid is-margin">
+                                    <span class="demo-box__text">I'm a grid container #1</span>
+                                </div>
+                                <span class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #2</span>
+                                </span>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first grid container</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #1</span>
+                                </div>
+                                <span class="demo-box grid is-margin">
+                                    <span class="demo-box__text">I'm a grid container #2</span>
+                                </span>																		
+                            </div>
+                            <span class="demo__caption">margins from the last grid container</span>
+                        </div>
+                    </div>
+                </div>			
+                <p>
+                    If we set the border and padding properties for the parent element margins cease collapsing.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="parent-border">
+                                    <div class="demo-box grid is-margin">
+                                        <span class="demo-box__text">I'm a grid container #1</span>
+                                    </div>
+                                    <span class="demo-box grid">
+                                        <span class="demo-box__text">I'm a grid container #2</span>
+                                    </span>												
+                                </div>
+                            </div>
+                            <span class="demo__caption">the parent element with borders and margins from the first grid container</span>
+                        </div>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="parent-border">
+                                    <div class="demo-box grid">
+                                        <span class="demo-box__text">I'm a grid container #1</span>
+                                    </div>
+                                    <span class="demo-box grid is-margin">
+                                        <span class="demo-box__text">I'm a grid container #2</span>
+                                    </span>		
+                                </div>
+                            </div>
+                            <span class="demo__caption">the parent element with border and margins from the last grid container</span>
+                        </div>
+                    </div>	
+                </div>	
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box grid is-margin">
+                                    <span class="demo-box__text">I'm a grid container #1</span>
+                                </div>
+                                <span class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #2</span>
+                                </span>												
+                            </div>
+                            <span class="demo__caption">the parent element with paddings and margins from the first grid container</span>
+                        </div>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #1</span>
+                                </div>
+                                <span class="demo-box grid is-margin">
+                                    <span class="demo-box__text">I'm a grid container #2</span>
+                                </span>		
+                            </div>
+                            <span class="demo__caption">the parent element with paddings and margins from the last grid container</span>
+                        </div>
+                    </div>	
+                </div>	
+                <p>
+                    The margins from adjacent grid containers collapse. The browsers choose the biggest between the two. And you can't change it.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #1</span>
+                                </div>
+                                <span class="demo-box grid is-margin">
+                                    <span class="demo-box__text">I'm a grid container #2</span>
+                                </span>
+                                <div class="demo-box grid is-margin">
+                                    <span class="demo-box__text">I'm a grid container #3</span>
+                                </div>							
+                                <span class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the parent element without paddings and margins from grid containers</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport parent-padding">
+                                <div class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #1</span>
+                                </div>
+                                <span class="demo-box grid is-margin">
+                                    <span class="demo-box__text">I'm a grid container #2</span>
+                                </span>
+                                <div class="demo-box grid is-margin">
+                                    <span class="demo-box__text">I'm a grid container #3</span>
+                                </div>							
+                                <span class="demo-box grid">
+                                    <span class="demo-box__text">I'm a grid container #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the parent element with paddings and margins from grid containers</span>
+                    </div>
+                </div>	
+                <h2>Default behavior of grid items</h2>
+                <p>
+                    <span class="page__point">5</span>
+                    Grid items always are blockified. All grid items that are set the display property with the inline, inline-block, inline-flex, inline-grid, or inline-table values will be changed. The inline and inline-block will changed to block, inline-flex -> flex, inline-grid -> grid and inline-table -> table.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm an inline element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline as a grid item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-block as a grid item</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <span class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm an inline-flex element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-flex as a grid item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <span class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm an inline-grid element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-grid as a grid item</span>
+                    </div>				
+                </div>
+                <p>
+                    <span class="page__point">6</span>
+                    The width of grid items fills up all available space by the text direction.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item with some text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    The height of grid items depending on the height of content and the number of items in the grid container. 
+                </p>
+                <p>
+                    If the grid container has fixed height grid items' height shares evenly between them taking into account the content height.  
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container without height: 150px</span>
+                    </div>				
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid" style="height: 150px">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid container has height: 150px</span>
+                    </div>	
+                </div>
+    
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1 with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text text text text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container without height: 150px</span>
+                    </div>			
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid" style="height: 150px">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2 with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text text text text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container has height: 150px</span>
+                    </div>
+                </div>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </span>	
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container without height: 150px</span>
+                    </div>				
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid" style="height: 150px">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </span>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container has height: 150px</span>
+                    </div>
+                </div>
+                <p>
+                    If the total height of grid items is more than the grid container the last grid item ends up outside the grid container. 
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </span>	
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #3</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #4</div>
+                                </span>			
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #5</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #6</div>
+                                </span>	
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container without height: 150px</span>
+                    </div>					
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid" style="height: 150px">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </span>	
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #3</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #4</div>
+                                </span>			
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #5</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #6</div>
+                                </span>	
+                            </div>
+                        </div>
+                        <span class="demo__caption" style="margin-block-start: 2.5rem;">grid items when the grid-container has height: 150px</span>
+                    </div>		
+                </div>
+                <p>
+                    <span class="page__point">7</span>
+                    Grid items start on a new line.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Box model features of grid items</h2>
+                <p>
+                    <span class="page__point">8</span>
+                    The width and height properties can be applied to grid items.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport grid">
+                            <div class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a grid item #1 <br> 148x148px</span>
+                            </div>
+                            <span class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a grid item #2 <br> 148x148px</span>
+                            </span>							
+                        </div>
+                    </div>	
+                </div>	
+                <p>
+                    <span class="page__point">9</span>
+                    The padding and border properties can be applied too.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport grid">
+                            <div class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a grid item #1</span>
+                            </div>
+                            <span class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a grid item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">grid items with paddings</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport grid">
+                            <div class="demo-box is-border">
+                                <span class="demo-box__text">I'm a grid item #1</span>
+                            </div>
+                            <span class="demo-box is-border">
+                                <span class="demo-box__text">I'm a grid item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">grid items with borders</span>
+                    </div>
+                </div>
+                <p>
+                    Pay attention margins don't end up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a grid item #1</span>
+                                </div>
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a grid item #2</span>
+                                </span>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first grid item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box ">
+                                    <span class="demo-box__text">I'm a grid item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a grid item #2</span>
+                                </span>																		
+                            </div>
+                            <span class="demo__caption">margins from the last grid item</span>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    The margins from adjacent grid items don't collapse too.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport grid">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a grid item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a grid item #2</span>
+                                </span>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a grid item #3</span>
+                                </div>							
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a grid item #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from adjacent grid items</span>
+                    </div>
+                </div>	
+            </section>
+            <section id="inline-grid-tab" aria-labelledby="inline-grid" role="tabpanel" tabindex="0" class="page__content" hidden>
+                <h2>Default behavior</h2>
+                <p>
+                    <span class="page__point">1</span>
+                    The width and height of inline grid container is calculated automatically depending on the content.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm an inline grid container</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div element as an inline grid container</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm an inline grid container</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the span element as an inline grid container</span>
+                    </div>
+                </div>
+                <p>
+                    If the content of the inline grid container doesn't fit on one line then a browser will move it on a new line. The width will be equal of the parent width. 
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm an inline grid container with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div element as an inline grid container</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <span class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm an inline grid container with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the span element as an inline grid container</span>
+                    </div>
+                </div>			
+                <p>
+                    <span class="page__point">2</span>
+                    Inline grid containers will be on the same line if there is space. Also the whitespace in the HTML code will create some gap between elements.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm an inline grid container #1</span>
+                                </div>
+                                <span class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm an inline grid container #2</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline grid container</span>
+                    </div>		
+                </div>
+                <h2>Box model features</h2>
+                <p>
+                    <span class="page__point">3</span>
+                    The width and height properties can be applied to an inline grid container.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport">
+                                <div class="demo-box inline-grid demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm an inline grid container #1 <br> 148x148px</span>
+                                </div>
+                                <span class="demo-box inline-grid demo-box_setted-sizes">
+                                    <span class="demo-box__text">I'm an inline grid container #2 <br> 148x148px</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline grid container with setted sizes</span>
+                    </div>		
+                </div>			
+                <p>
+                    <span class="page__point">4</span>
+                    You can set paddings, borders and margins without ending up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box inline-grid is-padding">
+                                <span class="demo-box__text">I'm an inline grid container #1</span>
+                            </div>
+                            <span class="demo-box inline-grid is-padding">
+                                <span class="demo-box__text">I'm an inline grid container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline grid container with paddings</span>
+                    </div>	
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box inline-grid is-border">
+                                <span class="demo-box__text">I'm an inline grid container #1</span>
+                            </div>
+                            <span class="demo-box inline-grid is-border">
+                                <span class="demo-box__text">I'm an inline grid container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline grid container with borders</span>
+                    </div>	
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport">
+                            <div class="demo-box inline-grid is-margin">
+                                <span class="demo-box__text">I'm an inline grid container #1</span>
+                            </div>
+                            <span class="demo-box inline-grid is-margin">
+                                <span class="demo-box__text">I'm an inline grid container #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">the div and span elements as an inline grid container with margins</span>
+                    </div>	
+                </div>			
+                <h2>Default behavior of grid items</h2>
+                <p>
+                    <span class="page__point">5</span>
+                    Grid items always are blockified. All grid items that are set the display property with the inline, inline-block, inline-flex, inline-grid, or inline-table values will be changed. The inline and inline-block will changed to block, inline-flex -> flex, inline-grid -> grid and inline-table -> table.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm an inline element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline as a grid item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <span class="demo-box inline-block">
+                                    <span class="demo-box__text">I'm an inline-block element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-block as a grid item</span>
+                    </div>
+                </div>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <span class="demo-box inline-flex">
+                                    <span class="demo-box__text">I'm an inline-flex element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-flex as a grid item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <span class="demo-box inline-grid">
+                                    <span class="demo-box__text">I'm an inline-grid element</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="demo__caption">the element with display: inline-grid as a grid item</span>
+                    </div>				
+                </div>
+                <p>
+                    <span class="page__point">6</span>
+                    The width of grid items fills up all available space by the text direction.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item with some text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    The height of grid items depending on the height of content and the number of items in the inline grid container. 
+                </p>
+                <p>
+                    If the inline grid container has fixed height grid items' height shares evenly between them taking into account the content height.  
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container without height: 150px</span>
+                    </div>				
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid" style="height: 150px">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid container has height: 150px</span>
+                    </div>	
+                </div>
+    
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1 with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text text text text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container without height: 150px</span>
+                    </div>			
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid" style="height: 150px">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2 with a loooooooooooong very loooooooooooong text text text text text text text text text text text text text text text text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container has height: 150px</span>
+                    </div>
+                </div>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </span>	
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container without height: 150px</span>
+                    </div>				
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid" style="height: 150px">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </span>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container has height: 150px</span>
+                    </div>
+                </div>
+                <p>
+                    If the total height of grid items is more than the inline grid container the last grid item ends up outside the inline grid container. 
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </span>	
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #3</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #4</div>
+                                </span>			
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #5</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #6</div>
+                                </span>	
+                            </div>
+                        </div>
+                        <span class="demo__caption">grid items when the grid-container without height: 150px</span>
+                    </div>					
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid" style="height: 150px">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </span>	
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #3</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #4</div>
+                                </span>			
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #5</div>
+                                </div>
+                                <span class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #6</div>
+                                </span>	
+                            </div>
+                        </div>
+                        <span class="demo__caption" style="margin-block-start: 2.5rem;">grid items when the grid-container has height: 150px</span>
+                    </div>		
+                </div>
+                <p>
+                    <span class="page__point">7</span>
+                    Grid items start on a new line.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #1</div>
+                                </div>
+                                <div class="demo-box">
+                                    <div class="demo-box__text">I'm a grid item #2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Box model features of grid items</h2>
+                <p>
+                    <span class="page__point">8</span>
+                    The width and height properties can be applied to grid items.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport inline-grid">
+                            <div class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a grid item #1 <br> 148x148px</span>
+                            </div>
+                            <span class="demo-box demo-box_setted-sizes">
+                                <span class="demo-box__text">I'm a grid item #2 <br> 148x148px</span>
+                            </span>							
+                        </div>
+                    </div>	
+                </div>	
+                <p>
+                    <span class="page__point">9</span>
+                    The padding and border properties can be applied too.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__viewport inline-grid">
+                            <div class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a grid item #1</span>
+                            </div>
+                            <span class="demo-box is-padding">
+                                <span class="demo-box__text">I'm a grid item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">grid items with paddings</span>
+                    </div>	
+                    <div class="demo">
+                        <div class="demo__viewport inline-grid">
+                            <div class="demo-box is-border">
+                                <span class="demo-box__text">I'm a grid item #1</span>
+                            </div>
+                            <span class="demo-box is-border">
+                                <span class="demo-box__text">I'm a grid item #2</span>
+                            </span>							
+                        </div>
+                        <span class="demo__caption">grid items with borders</span>
+                    </div>
+                </div>
+                <p>
+                    Pay attention margins don't end up outside the parent.
+                </p>
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a grid item #1</span>
+                                </div>
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a grid item #2</span>
+                                </span>																		
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from the first grid item</span>
+                    </div>
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box ">
+                                    <span class="demo-box__text">I'm a grid item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a grid item #2</span>
+                                </span>																		
+                            </div>
+                            <span class="demo__caption">margins from the last grid item</span>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    The margins from adjacent grid items don't collapse too.
+                </p>			
+                <div class="page__demos">
+                    <div class="demo">
+                        <div class="demo__container">
+                            <div class="demo__viewport inline-grid">
+                                <div class="demo-box">
+                                    <span class="demo-box__text">I'm a grid item #1</span>
+                                </div>
+                                <span class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a grid item #2</span>
+                                </span>
+                                <div class="demo-box is-margin">
+                                    <span class="demo-box__text">I'm a grid item #3</span>
+                                </div>							
+                                <span class="demo-box">
+                                    <span class="demo-box__text">I'm a grid item #4</span>
+                                </span>							
+                            </div>
+                        </div>
+                        <span class="demo__caption">margins from adjacent grid items</span>
+                    </div>
+                </div>	
+            </section>	
+        </div>
+        <div class="page__header">
+            <div class="page__twitter twitter">
+                <div class="twitter__text">
+                    <p>😊 If you like this cheat sheet, please, tell about it your friends on Twitter</p>
+                </div>
+                <a href="https://twitter.com/intent/tweet?text=Stas%20Melnikov%20told%20about%20all%20nuances%20of%20the%20display%20property%20www.codepen.io/melnik909/full/LYyXreW" class="ra-link twitter__share" target="_top">Share on Twitter</a>
+            </div>
+        </div>	
+    </div>
+    <script src="./vscode/syntax.js"></script>
+</body>
+</html>
